@@ -2,11 +2,14 @@
 #define POLYGON_H
 #include "spatial.h"
 
-class Polygon
+namespace AyxCppTest
 {
-public:
-    Polygon();
-    bool Contains();
-};
 
+    class Polygon
+    {
+    public:
+        Polygon();
+        bool Contains(Point line1Pt1);
+    };
+}
 #endif // POLYGON_H

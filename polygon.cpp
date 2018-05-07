@@ -1,6 +1,8 @@
 #include "polygon.h"
-
-Polygon::Polygon()
+namespace AyxCppTest
 {
+    Polygon::Polygon()
+    {
 
+    }
 }

@@ -15,8 +15,9 @@ namespace AyxCppTest
 	{
 	public:
 		// returns true if point is inside
-		// false if outside or on the line
-		virtual bool Contains(const Point &pt) = 0;
+        // false if outside or on the line
+        virtual ~Area(){};
+        virtual bool Contains(const Point &pt) = 0;
 	};
 
 	class Circle : public Area
@@ -24,7 +25,8 @@ namespace AyxCppTest
 		Point m_pt;
 		double m_radius;
 	public:
-		Circle(Point pt, double radius);
+        Circle(Point pt, double radius);
+        virtual ~Circle(){};
 		bool Contains(const Point &pt) override;
 	};
 
@@ -32,7 +34,8 @@ namespace AyxCppTest
 	{
 		Point m_TopLeft;
 		Point m_BottomRight;
-	public:
+    public:
+        virtual ~Rectangle(){};
 		Rectangle(Point topLeft, Point bottomRight);
 		bool Contains(const Point &pt) override;
 		double Size();

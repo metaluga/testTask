@@ -1,6 +1,7 @@
 #include "spatial.h"
 #include <cmath>
 #include <thread>
+#include <iostream>
 
 namespace AyxCppTest
 {
@@ -19,7 +20,7 @@ namespace AyxCppTest
 	{
 		++dbg_count_Points;
 	}
-	Point::~Point()
+    Point::~Point()
 	{
 		--dbg_count_Points;
 	}
@@ -55,7 +56,7 @@ namespace AyxCppTest
 	double Rectangle::Size()
 	{
 		// artificially slow for exercise 4.  Please don't remove
-		std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
 		return (m_TopLeft.m_x-m_BottomRight.m_x)*(m_TopLeft.m_y - m_BottomRight.m_y);
 	}
 }

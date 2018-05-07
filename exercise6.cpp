@@ -1,5 +1,8 @@
 #include "catch/catch.hpp"
 #include "Add.h"
+#include <iostream>
+#include <string>
+
 
 namespace AyxCppTest
 {
@@ -15,8 +18,10 @@ namespace AyxCppTest
 	*/
 	extern "C" const char* AddStr(const char* lhs, const char* rhs)
     {
+        std::string str = Add(std::string(lhs), std::string(rhs));
+        const char* cstr = str.c_str();
 
-        return Add(std::string(lhs), std::string(rhs)).c_str();
+        return cstr;
 	}
 
 	TEST_CASE("exercise6")
